@@ -1,0 +1,22 @@
+<p>BUDGET MANAGER APP</p>
+
+<label>Name: </label>
+<input type="text" [(ngModel)]="name">
+<br>
+<label>Type: </label>
+<input type="text" [(ngModel)]="expenseType">
+<br>
+<label>Amount: </label>
+<input type="text" [(ngModel)]="amount">
+<br>
+<label>Description: </label>
+<input type="text" [(ngModel)]="description">
+<br>
+<button (click)="add()">DODAJ!</button>
+<br>
+<br>
+<button (click)="getAll()">Get all</button>
+<div *ngFor="let expense of allExpenses">
+  <p>{{expense.name}}</p>
+</div>
+
